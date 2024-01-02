@@ -1113,7 +1113,7 @@ ArtNem_2PPosIcon:
 		binclude "General/2P Zone/Nemesis Art/Position Icons.bin"
 		even
 ArtNem_BPZMisc:
-		binclude "Levels/BPZ/Nemesis Art/Misc Art.bin"
+		binclude "Levels/BPZ/Nemesis Art/Misc Art.nem"
 		even
 ArtNem_DPZMisc:
 		binclude "Levels/DPZ/Nemesis Art/Misc Art.bin"
@@ -1152,10 +1152,10 @@ ArtKosM_LBZTitleCard:
 		binclude "Levels/LBZ/KosinskiM Art/Title Card.kosm"
 		even
 ArtKosM_ALZTitleCard:
-		binclude "Levels/ALZ/KosinskiM Art/Title Card.bin"
+		binclude "Levels/ALZ/KosinskiM Art/Title Card.kosm"
 		even
 ArtKosM_BPZTitleCard:
-		binclude "Levels/BPZ/KosinskiM Art/Title Card.bin"
+		binclude "Levels/BPZ/KosinskiM Art/Title Card.kosm"
 		even
 ArtKosM_CGZTitleCard:
 		binclude "Levels/CGZ/KosinskiM Art/Title Card.bin"
@@ -1783,17 +1783,17 @@ LBZ2_128x128_Kos:
 LBZ2_128x128_DeathEgg_Kos:
 		binclude "Levels/LBZ/Chunks/Act 2 Death Egg.kos"
 		even
-ALZ_16x16_Kos:	binclude "Levels/ALZ/Blocks/Primary.bin"
+ALZ_16x16_Kos:	binclude "Levels/ALZ/Blocks/Primary.kos"
 		even
-ALZ_8x8_KosM:	binclude "Levels/ALZ/Tiles/Primary.bin"
+ALZ_8x8_KosM:	binclude "Levels/ALZ/Tiles/Primary.kosm"
 		even
-ALZ_128x128_Kos:binclude "Levels/ALZ/Chunks/Primary.bin"
+ALZ_128x128_Kos:binclude "Levels/ALZ/Chunks/Primary.kos"
 		even
-BPZ_16x16_Kos:	binclude "Levels/BPZ/Blocks/Primary.bin"
+BPZ_16x16_Kos:	binclude "Levels/BPZ/Blocks/Primary.kos"
 		even
-BPZ_8x8_KosM:	binclude "Levels/BPZ/Tiles/Primary.bin"
+BPZ_8x8_KosM:	binclude "Levels/BPZ/Tiles/Primary.kosm"
 		even
-BPZ_128x128_Kos:binclude "Levels/BPZ/Chunks/Primary.bin"
+BPZ_128x128_Kos:binclude "Levels/BPZ/Chunks/Primary.kos"
 		even
 DPZ_16x16_Kos:	binclude "Levels/DPZ/Blocks/Primary.bin"
 		even

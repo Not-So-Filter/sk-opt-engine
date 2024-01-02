@@ -9247,7 +9247,7 @@ loc_95AE:
 		bsr.w	KosArt_To_VDP
 		move.l	#locret_952E,(_unkEF44_1).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		lea	(ArtKos_CompetitionLevel).l,a0
 		lea	(RAM_start).l,a1
 		movea.w	#$53E0,a2
@@ -9256,7 +9256,7 @@ loc_95AE:
 		movea.w	#$6940,a2
 		bsr.w	KosArt_To_VDP
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		lea	Pal_Competition1(pc),a0
 		lea	(Target_palette).w,a1
 		moveq	#$17,d0
@@ -9290,7 +9290,7 @@ loc_9658:
 		moveq	#signextendB(mus_CompetitionMenu),d0
 		jsr	(Play_Music).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		move.w	(VDP_reg_1_command).w,d0
 		ori.b	#$40,d0
 		move.w	d0,(VDP_control_port).l
@@ -9298,7 +9298,7 @@ loc_9658:
 
 loc_96B8:
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		addq.w	#1,(Level_frame_counter).w
 		jsr	(Process_Sprites).l
 		jsr	(Render_Sprites).l
@@ -9557,7 +9557,7 @@ loc_9A58:
 		bsr.w	KosArt_To_VDP
 		move.l	#locret_952E,(_unkEF44_1).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		lea	(ArtKos_CompetitionLevel).l,a0
 		lea	(RAM_start).l,a1
 		movea.w	#$53E0,a2
@@ -9566,7 +9566,7 @@ loc_9A58:
 		movea.w	#$B920,a2
 		bsr.w	KosArt_To_VDP
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		lea	(Pal_CompetitionMenuBG).l,a0
 		lea	(Target_palette).w,a1
 		moveq	#7,d0
@@ -9631,7 +9631,7 @@ loc_9BF4:
 		moveq	#signextendB(mus_CompetitionMenu),d0
 		jsr	(Play_Music).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		move.w	(VDP_reg_1_command).w,d0
 		ori.b	#$40,d0
 		move.w	d0,(VDP_control_port).l
@@ -9639,7 +9639,7 @@ loc_9BF4:
 
 loc_9C5C:
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		addq.w	#1,(Level_frame_counter).w
 		jsr	(Process_Sprites).l
 		jsr	sub_B596(pc)
@@ -10263,7 +10263,7 @@ loc_A1D2:
 		bsr.w	KosArt_To_VDP
 		move.l	#locret_952E,(_unkEF44_1).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		lea	(ArtKos_CompetitionLevel).l,a0
 		lea	(RAM_start).l,a1
 		movea.w	#$53E0,a2
@@ -10272,7 +10272,7 @@ loc_A1D2:
 		movea.w	#-$46E0,a2
 		bsr.w	KosArt_To_VDP
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		lea	(Pal_CompetitionMenuBG).l,a0
 		lea	(Target_palette).w,a1
 		moveq	#7,d0
@@ -10323,7 +10323,7 @@ loc_A29C:
 		moveq	#signextendB(mus_CompetitionMenu),d0
 		jsr	(Play_Music).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		move.w	(VDP_reg_1_command).w,d0
 		ori.b	#$40,d0
 		move.w	d0,(VDP_control_port).l
@@ -10331,7 +10331,7 @@ loc_A29C:
 
 loc_A33E:
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		addq.w	#1,(Level_frame_counter).w
 		jsr	(Process_Sprites).l
 		jsr	sub_B596(pc)
@@ -10688,7 +10688,7 @@ loc_AA02:
 		bsr.w	KosArt_To_VDP
 		move.l	#locret_952E,(_unkEF44_1).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		lea	(ArtKos_CompetitionLevel).l,a0
 		lea	(RAM_start).l,a1
 		movea.w	#$53E0,a2
@@ -10700,7 +10700,7 @@ loc_AA02:
 		movea.w	#-$46E0,a2
 		bsr.w	KosArt_To_VDP
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		lea	(Pal_CompetitionMenuBG).l,a0
 		lea	(Target_palette).w,a1
 		moveq	#7,d0
@@ -10744,7 +10744,7 @@ loc_AAF4:
 		moveq	#signextendB(mus_Continue),d0
 		jsr	(Play_Music).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		move.w	(VDP_reg_1_command).w,d0
 		ori.b	#$40,d0
 		move.w	d0,(VDP_control_port).l
@@ -10752,7 +10752,7 @@ loc_AAF4:
 
 loc_AB62:
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		addq.w	#1,(Level_frame_counter).w
 		move.w	(_unkEEA0).w,d7
 		beq.s	loc_AB92
@@ -11173,7 +11173,7 @@ loc_AF86:
 		bsr.w	KosArt_To_VDP
 		move.l	#locret_952E,(_unkEF44_1).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		lea	(ArtKos_CompetitionLevel).l,a0
 		lea	(RAM_start).l,a1
 		movea.w	#$53E0,a2
@@ -11185,7 +11185,7 @@ loc_AF86:
 		movea.w	#-$46E0,a2
 		bsr.w	KosArt_To_VDP
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		lea	(ArtKos_SSResultsGeneral).l,a0
 		lea	(RAM_start+$20).l,a1
 		jsr	(Kos_Decomp).w
@@ -11243,7 +11243,7 @@ loc_B0FC:
 		moveq	#signextendB(mus_Continue),d0
 		jsr	(Play_Music).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		move.w	(VDP_reg_1_command).w,d0
 		ori.b	#$40,d0
 		move.w	d0,(VDP_control_port).l
@@ -11251,7 +11251,7 @@ loc_B0FC:
 
 loc_B16A:
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		addq.w	#1,(Level_frame_counter).w
 		move.w	(_unkEEA0).w,d7
 		beq.s	loc_B19A
@@ -11938,13 +11938,13 @@ loc_B8EC:
 		bsr.w	KosArt_To_VDP
 		move.l	#locret_B85A,(_unkEF44_1).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		lea	(ArtKos_SaveScreenMisc).l,a0
 		lea	(RAM_start).l,a1
 		movea.w	#$53E0,a2
 		bsr.w	KosArt_To_VDP
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		lea	(Pal_SaveMenuBG).l,a0
 		lea	(Target_palette).w,a1
 		moveq	#7,d0
@@ -11992,7 +11992,7 @@ loc_BA3E:
 		jsr	(Play_Music).w
 		move.l	#loc_BB0A,(_unkEF44_1).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		move.w	(VDP_reg_1_command).w,d0
 		ori.b	#$40,d0
 		move.w	d0,(VDP_control_port).l
@@ -12000,7 +12000,7 @@ loc_BA3E:
 
 SaveScreen_MainLoop:
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		addq.w	#1,(Level_frame_counter).w
 		jsr	(Process_Sprites).l
 		move.w	(Camera_X_pos_copy).w,d0
@@ -48524,7 +48524,7 @@ loc_2D2DE:
 loc_2D300:
 		move.b	#$1E,(V_int_routine).w
 		jsr	(Process_Kos_Queue).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		jsr	(Process_Nem_Queue_Init).w
 		jsr	(Process_Kos_Module_Queue).w
 		tst.b	(Kos_modules_left).w
@@ -48554,7 +48554,7 @@ loc_2D35C:
 
 loc_2D378:
 		move.b	#8,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		addq.w	#1,(Level_frame_counter).w
 		jsr	(Process_Sprites).l
 		jsr	(Render_Sprites).l
@@ -70903,7 +70903,7 @@ loc_3F0F4:
 		jsr	(Process_Sprites).l
 		jsr	(Render_Sprites).l
 		move.b	#$18,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		move.w	(VDP_reg_1_command).w,d0
 		ori.b	#$40,d0
 		move.w	d0,(VDP_control_port).l
@@ -70913,7 +70913,7 @@ loc_3F0F4:
 
 loc_3F168:
 		move.b	#$18,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		jsr	(Process_Sprites).l
 		jsr	(Render_Sprites).l
 		move.b	(_unkFAA9).w,d0
@@ -71510,7 +71510,7 @@ loc_404AC:
 		jsr	(Play_Music).w
 		move.w	#$B4,(_unkFA82).w
 		move.b	#$18,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		move.w	(VDP_reg_1_command).w,d0
 		ori.b	#$40,d0
 		move.w	d0,(VDP_control_port).l
@@ -71519,7 +71519,7 @@ loc_404AC:
 loc_404E0:
 		move.b	#$18,(V_int_routine).w
 		jsr	(Process_Kos_Queue).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		addq.w	#1,(Level_frame_counter).w
 		jsr	(Process_Sprites).l
 		jsr	(Render_Sprites).l
@@ -71570,7 +71570,7 @@ loc_40550:
 		lea	(a1,d0.w),a1
 		bsr.w	sub_40A4A
 		move.b	#$18,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		jmp	(Pal_FadeFromBlack).l
 ; ---------------------------------------------------------------------------
 
@@ -71648,7 +71648,7 @@ loc_4065C:
 		jsr	(Process_Sprites).l
 		jsr	(Render_Sprites).l
 		move.b	#$18,(V_int_routine).w
-		jsr	(Wait_VSync).l
+		jsr	(Wait_VSync).w
 		jmp	(Pal_FadeFromBlack).l
 ; ---------------------------------------------------------------------------
 Child6_EndingS3Logo:
@@ -110396,7 +110396,7 @@ ArtNem_2PLapNum:binclude "General/2P Zone/Nemesis Art/Lap Numbers.bin"
 ArtNem_2PPosIcon:
 		binclude "General/2P Zone/Nemesis Art/Position Icons.bin"
 		even
-ArtNem_BPZMisc:	binclude "Levels/BPZ/Nemesis Art/Misc Art.bin"
+ArtNem_BPZMisc:	binclude "Levels/BPZ/Nemesis Art/Misc Art.nem"
 		even
 ArtNem_DPZMisc:	binclude "Levels/DPZ/Nemesis Art/Misc Art.bin"
 		even
@@ -110457,10 +110457,10 @@ ArtKosM_LBZTitleCard:
 		binclude "Levels/LBZ/KosinskiM Art/Title Card.kosm"
 		even
 ArtKosM_ALZTitleCard:
-		binclude "Levels/ALZ/KosinskiM Art/Title Card.bin"
+		binclude "Levels/ALZ/KosinskiM Art/Title Card.kosm"
 		even
 ArtKosM_BPZTitleCard:
-		binclude "Levels/BPZ/KosinskiM Art/Title Card.bin"
+		binclude "Levels/BPZ/KosinskiM Art/Title Card.kosm"
 		even
 ArtKosM_CGZTitleCard:
 		binclude "Levels/CGZ/KosinskiM Art/Title Card.bin"
@@ -110718,17 +110718,17 @@ MHZ_128x128_Kos:
 LRZ_16x16_Kos:
 ArtKosM_LRZ:
 LRZ_128x128_Kos:
-ALZ_16x16_Kos:	binclude "Levels/ALZ/Blocks/Primary.bin"
+ALZ_16x16_Kos:	binclude "Levels/ALZ/Blocks/Primary.kos"
 		even
-ALZ_8x8_KosM:	binclude "Levels/ALZ/Tiles/Primary.bin"
+ALZ_8x8_KosM:	binclude "Levels/ALZ/Tiles/Primary.kosm"
 		even
-ALZ_128x128_Kos:binclude "Levels/ALZ/Chunks/Primary.bin"
+ALZ_128x128_Kos:binclude "Levels/ALZ/Chunks/Primary.kos"
 		even
-BPZ_16x16_Kos:	binclude "Levels/BPZ/Blocks/Primary.bin"
+BPZ_16x16_Kos:	binclude "Levels/BPZ/Blocks/Primary.kos"
 		even
-BPZ_8x8_KosM:	binclude "Levels/BPZ/Tiles/Primary.bin"
+BPZ_8x8_KosM:	binclude "Levels/BPZ/Tiles/Primary.kosm"
 		even
-BPZ_128x128_Kos:binclude "Levels/BPZ/Chunks/Primary.bin"
+BPZ_128x128_Kos:binclude "Levels/BPZ/Chunks/Primary.kos"
 		even
 DPZ_16x16_Kos:	binclude "Levels/DPZ/Blocks/Primary.bin"
 		even
