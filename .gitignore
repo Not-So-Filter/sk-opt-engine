@@ -5,8 +5,8 @@ s3built.bin
 s3built.prev.bin
 skbuilt.bin
 skbuilt.prev.bin
-s3cbuilt.bin
-s3cbuilt.prev.bin
+s3kbuilt.bin
+s3kbuilt.prev.bin
 s3.log
 s3.lst
 sonic3k.log
