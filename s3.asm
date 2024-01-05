@@ -7362,7 +7362,8 @@ Obj_SStage_7DB8:
 		move.b	#1,$22(a1)
 
 loc_7DD4:
-		move.w	#$80,6(a0)
+		move.b	#$80,7(a0)
+		move.b	#$80,6(a0)
 		move.w	#0,8(a0)
 		move.l	#Map_GetBlueSpheres,$C(a0)
 		move.w	#$A55F,$A(a0)
@@ -7457,7 +7458,8 @@ Map_GetBlueSpheres:
 
 Obj_SStage_7F1C:
 		move.b	#4,4(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		move.w	#$200,8(a0)
 		move.l	#Map_SStageSonic,$C(a0)
 		move.w	#$87D4,$A(a0)
@@ -7620,7 +7622,8 @@ byte_813A:	dc.b    9,  $A,  $B,   9,  $A,  $B,   9,  $A,  $B,   9,  $A,  $B,  $B
 
 Obj_SStage_8148:
 		move.b	#4,4(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		move.w	#$180,8(a0)
 		move.l	#Map_SStageTails,$C(a0)
 		move.w	#$A7EB,$A(a0)
@@ -7765,7 +7768,8 @@ loc_82D6:
 
 Obj_SStage_82EE:
 		move.b	#4,4(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		move.w	#$100,8(a0)
 		move.l	#Map_SStageTailstails,$C(a0)
 		move.w	#$A7B0,$A(a0)
@@ -7811,7 +7815,8 @@ Obj_SStage_8380:
 
 loc_8392:
 		move.b	#4,4(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		move.w	#$380,8(a0)
 		move.l	#Map_SStageShadow,$C(a0)
 		move.w	#$E7A0,$A(a0)
@@ -9247,7 +9252,7 @@ loc_95AE:
 		bsr.w	KosArt_To_VDP
 		move.l	#locret_952E,(_unkEF44_1).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		lea	(ArtKos_CompetitionLevel).l,a0
 		lea	(RAM_start).l,a1
 		movea.w	#$53E0,a2
@@ -9256,7 +9261,7 @@ loc_95AE:
 		movea.w	#$6940,a2
 		bsr.w	KosArt_To_VDP
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		lea	Pal_Competition1(pc),a0
 		lea	(Target_palette).w,a1
 		moveq	#$17,d0
@@ -9290,7 +9295,7 @@ loc_9658:
 		moveq	#signextendB(mus_CompetitionMenu),d0
 		jsr	(Play_Music).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		move.w	(VDP_reg_1_command).w,d0
 		ori.b	#$40,d0
 		move.w	d0,(VDP_control_port).l
@@ -9298,7 +9303,7 @@ loc_9658:
 
 loc_96B8:
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		addq.w	#1,(Level_frame_counter).w
 		jsr	(Process_Sprites).l
 		jsr	(Render_Sprites).l
@@ -9557,7 +9562,7 @@ loc_9A58:
 		bsr.w	KosArt_To_VDP
 		move.l	#locret_952E,(_unkEF44_1).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		lea	(ArtKos_CompetitionLevel).l,a0
 		lea	(RAM_start).l,a1
 		movea.w	#$53E0,a2
@@ -9566,7 +9571,7 @@ loc_9A58:
 		movea.w	#$B920,a2
 		bsr.w	KosArt_To_VDP
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		lea	(Pal_CompetitionMenuBG).l,a0
 		lea	(Target_palette).w,a1
 		moveq	#7,d0
@@ -9631,7 +9636,7 @@ loc_9BF4:
 		moveq	#signextendB(mus_CompetitionMenu),d0
 		jsr	(Play_Music).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		move.w	(VDP_reg_1_command).w,d0
 		ori.b	#$40,d0
 		move.w	d0,(VDP_control_port).l
@@ -9639,7 +9644,7 @@ loc_9BF4:
 
 loc_9C5C:
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		addq.w	#1,(Level_frame_counter).w
 		jsr	(Process_Sprites).l
 		jsr	sub_B596(pc)
@@ -10263,7 +10268,7 @@ loc_A1D2:
 		bsr.w	KosArt_To_VDP
 		move.l	#locret_952E,(_unkEF44_1).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		lea	(ArtKos_CompetitionLevel).l,a0
 		lea	(RAM_start).l,a1
 		movea.w	#$53E0,a2
@@ -10272,7 +10277,7 @@ loc_A1D2:
 		movea.w	#-$46E0,a2
 		bsr.w	KosArt_To_VDP
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		lea	(Pal_CompetitionMenuBG).l,a0
 		lea	(Target_palette).w,a1
 		moveq	#7,d0
@@ -10323,7 +10328,7 @@ loc_A29C:
 		moveq	#signextendB(mus_CompetitionMenu),d0
 		jsr	(Play_Music).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		move.w	(VDP_reg_1_command).w,d0
 		ori.b	#$40,d0
 		move.w	d0,(VDP_control_port).l
@@ -10331,7 +10336,7 @@ loc_A29C:
 
 loc_A33E:
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		addq.w	#1,(Level_frame_counter).w
 		jsr	(Process_Sprites).l
 		jsr	sub_B596(pc)
@@ -10688,7 +10693,7 @@ loc_AA02:
 		bsr.w	KosArt_To_VDP
 		move.l	#locret_952E,(_unkEF44_1).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		lea	(ArtKos_CompetitionLevel).l,a0
 		lea	(RAM_start).l,a1
 		movea.w	#$53E0,a2
@@ -10700,7 +10705,7 @@ loc_AA02:
 		movea.w	#-$46E0,a2
 		bsr.w	KosArt_To_VDP
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		lea	(Pal_CompetitionMenuBG).l,a0
 		lea	(Target_palette).w,a1
 		moveq	#7,d0
@@ -10744,7 +10749,7 @@ loc_AAF4:
 		moveq	#signextendB(mus_Continue),d0
 		jsr	(Play_Music).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		move.w	(VDP_reg_1_command).w,d0
 		ori.b	#$40,d0
 		move.w	d0,(VDP_control_port).l
@@ -10752,7 +10757,7 @@ loc_AAF4:
 
 loc_AB62:
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		addq.w	#1,(Level_frame_counter).w
 		move.w	(_unkEEA0).w,d7
 		beq.s	loc_AB92
@@ -11173,7 +11178,7 @@ loc_AF86:
 		bsr.w	KosArt_To_VDP
 		move.l	#locret_952E,(_unkEF44_1).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		lea	(ArtKos_CompetitionLevel).l,a0
 		lea	(RAM_start).l,a1
 		movea.w	#$53E0,a2
@@ -11185,7 +11190,7 @@ loc_AF86:
 		movea.w	#-$46E0,a2
 		bsr.w	KosArt_To_VDP
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		lea	(ArtKos_SSResultsGeneral).l,a0
 		lea	(RAM_start+$20).l,a1
 		jsr	(Kos_Decomp).w
@@ -11243,7 +11248,7 @@ loc_B0FC:
 		moveq	#signextendB(mus_Continue),d0
 		jsr	(Play_Music).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		move.w	(VDP_reg_1_command).w,d0
 		ori.b	#$40,d0
 		move.w	d0,(VDP_control_port).l
@@ -11251,7 +11256,7 @@ loc_B0FC:
 
 loc_B16A:
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		addq.w	#1,(Level_frame_counter).w
 		move.w	(_unkEEA0).w,d7
 		beq.s	loc_B19A
@@ -11938,13 +11943,13 @@ loc_B8EC:
 		bsr.w	KosArt_To_VDP
 		move.l	#locret_B85A,(_unkEF44_1).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		lea	(ArtKos_SaveScreenMisc).l,a0
 		lea	(RAM_start).l,a1
 		movea.w	#$53E0,a2
 		bsr.w	KosArt_To_VDP
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		lea	(Pal_SaveMenuBG).l,a0
 		lea	(Target_palette).w,a1
 		moveq	#7,d0
@@ -11992,7 +11997,7 @@ loc_BA3E:
 		jsr	(Play_Music).w
 		move.l	#loc_BB0A,(_unkEF44_1).w
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		move.w	(VDP_reg_1_command).w,d0
 		ori.b	#$40,d0
 		move.w	d0,(VDP_control_port).l
@@ -12000,7 +12005,7 @@ loc_BA3E:
 
 SaveScreen_MainLoop:
 		move.b	#$1E,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		addq.w	#1,(Level_frame_counter).w
 		jsr	(Process_Sprites).l
 		move.w	(Camera_X_pos_copy).w,d0
@@ -16303,7 +16308,8 @@ loc_11740:
 		move.b	#$B,$44(a0)
 		move.b	#5,$45(a0)
 		move.w	#$100,8(a0)
-		move.w	#$C,6(a0)
+		move.b	#$C,7(a0)
+		move.b	#$C,6(a0)
 		move.b	#4,4(a0)
 		lea	(Character_Speeds).l,a1
 		moveq	#0,d0
@@ -16740,7 +16746,8 @@ Sonic_Init:
 		move.b	#9,$45(a0)
 		move.l	#Map_Sonic,$C(a0)
 		move.w	#$100,8(a0)
-		move.w	#$18,6(a0)
+		move.b	#$18,7(a0)
+		move.b	#$18,6(a0)
 		move.b	#4,4(a0)
 		move.b	#0,$38(a0)
 		move.w	#$600,(a4)
@@ -19862,7 +19869,8 @@ loc_13EBC:
 		move.b	#5,$45(a0)
 		move.l	#Map_Tails2P,$C(a0)
 		move.w	#$100,8(a0)
-		move.w	#$C,6(a0)
+		move.b	#$C,7(a0)
+		move.b	#$C,6(a0)
 		move.b	#$84,4(a0)
 		move.b	#1,$38(a0)
 		lea	(Character_Speeds).l,a1
@@ -20350,7 +20358,8 @@ Tails_Init:
 		move.b	#9,$45(a0)
 		move.l	#Map_Tails,$C(a0)
 		move.w	#$100,8(a0)
-		move.w	#$18,6(a0)
+		move.b	#$18,7(a0)
+		move.b	#$18,6(a0)
 		move.b	#$84,4(a0)
 		move.b	#1,$38(a0)
 		move.w	#$600,(a4)
@@ -23939,7 +23948,8 @@ Obj_Tails_Tail:
 		move.l	#Map_Tails_Tail,$C(a0)
 		move.w	#ArtTile_Player_2_Tail,$A(a0)
 		move.w	#$100,8(a0)
-		move.w	#$18,6(a0)
+		move.b	#$18,7(a0)
+		move.b	#$18,6(a0)
 		move.b	#4,4(a0)
 		move.l	#Obj_Tails_Tail_Main,(a0)
 
@@ -24027,7 +24037,8 @@ Obj_Tails2P_Tail:
 
 loc_16CCC:
 		move.w	#$100,8(a0)
-		move.w	#$18,6(a0)
+		move.b	#$18,7(a0)
+		move.b	#$18,6(a0)
 		move.b	#4,4(a0)
 		move.l	#loc_16CEA,(a0)
 
@@ -25097,7 +25108,8 @@ Obj_SuperSonic_Stars:
 		move.l	#Map_SuperSonic_Stars,$C(a0)
 		move.b	#4,4(a0)
 		move.w	#$80,8(a0)
-		move.w	#$18,6(a0)
+		move.b	#$18,7(a0)
+		move.b	#$18,6(a0)
 		move.w	#ArtTile_Shield,$A(a0)
 		btst	#7,(Player_1+art_tile).w
 		beq.s	loc_17EEA
@@ -25183,7 +25195,8 @@ loc_17F92:
 		move.w	#$879C,$A(a1)
 		move.b	#$84,4(a1)
 		move.w	#$380,8(a1)
-		move.w	#8,6(a1)
+		move.b	#8,7(a1)
+		move.b	#8,6(a1)
 		tst.w	d4
 		bmi.s	loc_17FFA
 		move.w	d4,d0
@@ -25235,7 +25248,8 @@ Obj_InstaShield:
 		move.l	#ArtUnc_InstaShield,$38(a0)
 		move.b	#4,4(a0)
 		move.w	#$80,8(a0)
-		move.w	#$18,6(a0)
+		move.b	#$18,7(a0)
+		move.b	#$18,6(a0)
 		move.w	#ArtTile_Shield,$A(a0)
 		move.w	#tiles_to_bytes(ArtTile_Shield),$40(a0)
 		btst	#7,(Player_1+art_tile).w
@@ -25290,7 +25304,8 @@ Obj_FireShield:
 		move.l	#ArtUnc_FireShield,$38(a0)
 		move.b	#4,4(a0)
 		move.w	#$80,8(a0)
-		move.w	#$18,6(a0)
+		move.b	#$18,7(a0)
+		move.b	#$18,6(a0)
 		move.w	#ArtTile_Shield,$A(a0)
 		move.w	#tiles_to_bytes(ArtTile_Shield),$40(a0)
 		btst	#7,(Player_1+art_tile).w
@@ -25364,7 +25379,8 @@ Obj_LightningShield:
 		move.l	#ArtUnc_LightningShield,$38(a0)
 		move.b	#4,4(a0)
 		move.w	#$80,8(a0)
-		move.w	#$18,6(a0)
+		move.b	#$18,7(a0)
+		move.b	#$18,6(a0)
 		move.w	#ArtTile_Shield,$A(a0)
 		move.w	#tiles_to_bytes(ArtTile_Shield),$40(a0)
 		btst	#7,(Player_1+art_tile).w
@@ -25458,9 +25474,11 @@ loc_183AE:
 		move.w	$A(a0),$A(a1)
 		move.b	#4,4(a1)
 		move.w	#$80,8(a1)
-		move.w	#8,6(a1)
+		move.b	#8,7(a1)
+		move.b	#8,6(a1)
 		move.b	#1,$20(a1)
-		move.l	(a2)+,$18(a1)
+		move.w	(a2)+,$18(a1)
+		move.w	(a2)+,$1A(a1)
 		dbf	d1,loc_183AE
 
 locret_183FC:
@@ -25510,7 +25528,8 @@ Obj_BubbleShield:
 		move.l	#ArtUnc_BubbleShield,$38(a0)
 		move.b	#4,4(a0)
 		move.w	#$80,8(a0)
-		move.w	#$18,6(a0)
+		move.b	#$18,7(a0)
+		move.b	#$18,6(a0)
 		move.w	#ArtTile_Shield,$A(a0)
 		move.w	#tiles_to_bytes(ArtTile_Shield),$40(a0)
 		btst	#7,(Player_1+art_tile).w
@@ -25872,7 +25891,8 @@ Obj_Attracted_Ring:
 		move.b	#4,4(a0)
 		move.w	#$100,8(a0)
 		move.b	#$47,$28(a0)
-		move.w	#8,6(a0)
+		move.b	#8,7(a0)
+		move.b	#8,6(a0)
 		move.b	#8,$1E(a0)
 		move.b	#8,$1F(a0)
 		move.l	#loc_18FD2,(a0)
@@ -29205,7 +29225,8 @@ Obj_PathSwap:
 		move.l	#Map_PathSwap,$C(a0)
 		move.w	#make_art_tile(ArtTile_Ring,1,0),$A(a0)
 		ori.b	#4,4(a0)
-		move.w	#$40,6(a0)
+		move.b	#$40,7(a0)
+		move.b	#$40,6(a0)
 		move.w	#$280,8(a0)
 		move.b	$2C(a0),d0
 		btst	#2,d0
@@ -30938,7 +30959,8 @@ loc_1C24C:
 		move.b	#4,4(a0)
 		move.w	#$80,8(a0)
 		move.b	#0,$28(a0)
-		move.w	#$C,6(a0)
+		move.b	#$C,7(a0)
+		move.b	#$C,6(a0)
 		move.b	#3,$24(a0)
 		move.b	#0,$22(a0)
 		moveq	#signextendB(sfx_Break),d0
@@ -30962,7 +30984,8 @@ Obj_FireShield_Dissipate:
 		move.w	#ArtTile_Explosion,$A(a0)
 		move.b	#4,4(a0)
 		move.w	#$280,8(a0)
-		move.w	#$C,6(a0)
+		move.b	#$C,7(a0)
+		move.b	#$C,6(a0)
 		move.b	#3,$24(a0)
 		move.b	#1,$22(a0)
 		move.l	#loc_1C2F8,(a0)
@@ -30985,7 +31008,8 @@ loc_1C31E:
 		move.w	#make_art_tile(ArtTile_Explosion,0,1),$A(a0)
 		move.b	#4,4(a0)
 		move.w	#$100,8(a0)
-		move.w	#$C,6(a0)
+		move.b	#$C,7(a0)
+		move.b	#$C,6(a0)
 		move.b	#0,$22(a0)
 		move.l	#loc_1C350,(a0)
 
@@ -31047,7 +31071,8 @@ Obj_AutoSpin:
 		move.l	#Map_PathSwap,$C(a0)
 		move.w	#ArtTile_Ring,$A(a0)
 		ori.b	#4,4(a0)
-		move.w	#$80,6(a0)
+		move.b	#$80,7(a0)
+		move.b	#$80,6(a0)
 		move.w	#$280,8(a0)
 		move.b	$2C(a0),d0
 		btst	#2,d0
@@ -31312,7 +31337,8 @@ Obj_S2LavaMarker:
 loc_1C726:
 		move.w	#make_art_tile(ArtTile_Ring,0,1),$A(a0)
 		move.b	#$84,4(a0)
-		move.w	#$80,6(a0)
+		move.b	#$80,7(a0)
+		move.b	#$80,6(a0)
 		move.w	#$200,8(a0)
 		move.b	$2C(a0),$22(a0)
 		move.l	#loc_1C750,(a0)
@@ -31840,7 +31866,8 @@ loc_1CD68:
 		add.w	d3,d0
 		move.w	d0,$14(a1)
 		move.w	8(a0),8(a1)
-		move.w	#4,6(a1)
+		move.b	#4,7(a1)
+		move.b	#4,6(a1)
 		move.b	$22(a0),$22(a1)
 		move.w	$18(a0),$18(a1)
 		move.w	$1A(a0),$1A(a1)
@@ -33168,7 +33195,8 @@ loc_1DE40:
 		move.w	#$4001,$A(a0)
 		move.l	#byte_1E4BA,$30(a0)
 		move.l	#byte_1E698,$3C(a0)
-		move.w	#$30,6(a0)
+		move.b	#$30,7(a0)
+		move.b	#$30,6(a0)
 
 loc_1DE8E:
 		ori.b	#4,4(a0)
@@ -34450,7 +34478,8 @@ loc_2013E:
 
 sub_20140:
 		move.b	#4,4(a1)
-		move.w	#8,6(a1)
+		move.b	#8,7(a1)
+		move.b	#8,6(a1)
 		move.w	#$200,8(a1)
 		move.l	#Map_AIZRideVine,$C(a1)
 		move.w	#$41B,$A(a1)
@@ -35065,7 +35094,8 @@ loc_20802:
 
 sub_20804:
 		move.b	#4,4(a1)
-		move.w	#8,6(a1)
+		move.b	#8,7(a1)
+		move.b	#8,6(a1)
 		move.w	#$200,8(a1)
 		move.l	#Map_AIZRideVine,$C(a1)
 		move.w	#$41B,$A(a1)
@@ -35240,7 +35270,8 @@ Obj_Spring:
 		move.l	#Map_Spring,$C(a0)
 		move.w	#$4A4,$A(a0)
 		ori.b	#4,4(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		move.w	#$200,8(a0)
 		move.w	$10(a0),$32(a0)
 		move.w	$14(a0),$34(a0)
@@ -35265,7 +35296,8 @@ sub_21426:
 		move.l	#Map_Spring,$C(a0)
 		move.w	#$4A4,$A(a0)
 		ori.b	#4,4(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		move.w	#$200,8(a0)
 		move.w	$10(a0),$32(a0)
 		move.w	$14(a0),$34(a0)
@@ -38551,7 +38583,8 @@ Obj_HCZSnakeBlocks:
 		move.w	#$28,$A(a0)
 		move.b	#4,4(a0)
 		move.w	#$180,8(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		move.b	#1,$22(a0)
 		move.w	$10(a0),$30(a0)
 		move.w	$14(a0),$34(a0)
@@ -38681,7 +38714,8 @@ Obj_LBZExplodingTrigger:
 		move.l	#Map_LBZExplodingTrigger,$C(a0)
 		move.w	#$4433,$A(a0)
 		ori.b	#4,4(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		move.w	#$280,8(a0)
 		move.b	#$C6,$28(a0)
 		move.l	#loc_24944,(a0)
@@ -38735,7 +38769,8 @@ Obj_MGZDashTrigger:
 		move.l	#Map_MGZDashTrigger,$C(a0)
 		move.w	#$235F,$A(a0)
 		ori.b	#4,4(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		move.w	#$280,8(a0)
 		bset	#6,4(a0)
 		move.w	#1,$16(a0)
@@ -39302,7 +39337,8 @@ Map_LBZPlayerLauncher:
 sub_2536C:
 		move.l	#Map_LBZFlameThrower,$C(a1)
 		move.w	#$43AC,$A(a1)
-		move.w	#$10,6(a1)
+		move.b	#$10,7(a1)
+		move.b	#$10,6(a1)
 		ori.b	#4,4(a1)
 		move.w	#$200,8(a1)
 		rts
@@ -40644,6 +40680,7 @@ sub_266EE:
 		lea	$1A(a3),a2
 		adda.w	(a3,d0.w),a2
 		move.l	#loc_266AE,d4
+		move.b	4(a0),d5
 		moveq	#$B,d1
 
 loc_26714:
@@ -40651,7 +40688,7 @@ loc_26714:
 		bne.w	loc_267CC
 		move.l	d4,(a1)
 		move.l	a3,$C(a1)
-		move.b	4(a0),4(a1)
+		move.b	d5,4(a1)
 		move.w	$A(a0),$A(a1)
 		move.b	8(a0),8(a1)
 		move.b	7(a0),7(a1)
@@ -40677,6 +40714,8 @@ loc_26714:
 		subq.w	#1,d1
 		moveq	#3,d1
 		bset	#5,4(a0)
+		move.l	(a0),d4
+		move.b	4(a0),d5
 		movea.l	a0,a1
 		bra.s	loc_26798
 ; ---------------------------------------------------------------------------
@@ -40687,15 +40726,16 @@ loc_2678E:
 		addq.w	#6,a3
 
 loc_26798:
-		move.l	(a0),(a1)
+		move.l	d4,(a1)
 		move.l	a3,$C(a1)
-		move.b	4(a0),4(a1)
+		move.b	d5,4(a1)
 		move.w	$10(a0),$10(a1)
 		move.w	$14(a0),$14(a1)
 		move.w	$A(a0),$A(a1)
 		move.b	8(a0),8(a1)
 		move.b	7(a0),7(a1)
-		move.l	(a4)+,$18(a1)
+		move.w	(a4)+,$18(a1)
+		move.w	(a4)+,$1A(a1)
 		dbf	d1,loc_2678E
 
 loc_267CC:
@@ -42430,7 +42470,8 @@ locret_27958:
 Obj_LBZSpinLauncher:
 		move.l	#Map_LBZSpinLauncher,$C(a0)
 		move.w	#$42EA,$A(a0)
-		move.w	#$20,6(a0)
+		move.b	#$20,7(a0)
+		move.b	#$20,6(a0)
 		ori.b	#4,4(a0)
 		move.w	#$80,8(a0)
 		move.l	#loc_27986,(a0)
@@ -42820,7 +42861,8 @@ Map_LBZLoweringGrapple:
 Obj_MGZLBZSmashingPillar:
 		move.l	#Map_LBZSmashingSpikes,$C(a0)
 		move.w	#$4455,$A(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		move.w	#$80,8(a0)
 		cmpi.b	#2,(Current_zone).w
 		bne.s	loc_2815C
@@ -43002,7 +43044,8 @@ Map_LBZGateLaser:
 
 Obj_LBZAlarm:
 		move.b	#4,4(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		move.w	#$280,8(a0)
 		move.b	#$D7,$28(a0)
 		move.l	#loc_283DC,(a0)
@@ -43367,7 +43410,8 @@ loc_28802:
 Obj_TunnelExhaustControl:
 		move.l	#Map_TunnelExhaust,$C(a0)
 		move.w	#$42EA,$A(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		ori.b	#4,4(a0)
 		move.w	#$180,8(a0)
 		tst.b	$2C(a0)
@@ -43412,7 +43456,8 @@ Obj_TunnelExhaustControlMain:
 		move.w	$14(a0),$14(a1)
 		move.l	#Map_TunnelExhaust,$C(a1)
 		move.w	#$42EA,$A(a1)
-		move.w	#$10,6(a1)
+		move.b	#$10,7(a1)
+		move.b	#$10,6(a1)
 		move.w	#$380,8(a1)
 		move.w	$26(a0),d0
 		cmpi.w	#6,d0
@@ -43539,7 +43584,8 @@ Obj_TunnelExContinuous:
 		move.w	$14(a0),$14(a1)
 		move.l	#Map_TunnelExhaust,$C(a1)
 		move.w	#$42EA,$A(a1)
-		move.w	#$10,6(a1)
+		move.b	#$10,7(a1)
+		move.b	#$10,6(a1)
 		move.w	#$380,8(a1)
 		move.w	#0,$18(a1)
 		move.w	#$400,$1A(a1)
@@ -43622,7 +43668,8 @@ loc_28C5E:
 		move.w	$14(a0),$14(a1)
 		move.l	#Map_LBZTubeElevator,$C(a1)
 		move.w	#$2455,$A(a1)
-		move.w	#$18,6(a1)
+		move.b	#$18,7(a1)
+		move.b	#$18,6(a1)
 		ori.b	#4,4(a1)
 		move.w	#$280,8(a1)
 		move.b	#6,$22(a1)
@@ -44259,7 +44306,8 @@ loc_29684:
 		bne.s	loc_296AE
 		move.l	#Map_CNZCorkFloor,$C(a0)
 		move.w	#$4430,$A(a0)
-		move.w	#$20,6(a0)
+		move.b	#$20,7(a0)
+		move.b	#$20,6(a0)
 		move.l	#word_29B20,$3C(a0)
 
 loc_296AE:
@@ -44289,7 +44337,8 @@ loc_29702:
 		bne.s	loc_2972C
 		move.l	#Map_LBZCorkFloor,$C(a0)
 		move.w	#$4001,$A(a0)
-		move.w	#$20,6(a0)
+		move.b	#$20,7(a0)
+		move.b	#$20,6(a0)
 		move.l	#word_29B20,$3C(a0)
 
 loc_2972C:
@@ -45337,7 +45386,8 @@ loc_2A85C:
 		move.w	8(a0),8(a1)
 		move.b	#4,4(a1)
 		bset	#6,4(a1)
-		move.w	#$40,6(a1)
+		move.b	#$40,7(a1)
+		move.b	#$40,6(a1)
 		move.w	$30(a0),d2
 		move.w	$32(a0),d3
 		moveq	#8,d1
@@ -45362,7 +45412,8 @@ loc_2A8AE:
 		move.w	8(a0),8(a1)
 		move.b	#4,4(a1)
 		bset	#6,4(a1)
-		move.w	#$40,6(a1)
+		move.b	#$40,7(a1)
+		move.b	#$40,6(a1)
 		moveq	#4,d1
 		move.w	d1,$16(a1)
 		subq.w	#1,d1
@@ -47242,7 +47293,8 @@ sub_2C49E:
 		move.l	$C(a0),$C(a1)
 		move.w	$A(a0),$A(a1)
 		move.b	#4,4(a1)
-		move.w	#8,6(a1)
+		move.b	#8,7(a1)
+		move.b	#8,6(a1)
 		move.w	#$200,8(a1)
 		move.b	#2,$22(a1)
 		move.w	#$20,$36(a1)
@@ -48524,7 +48576,7 @@ loc_2D2DE:
 loc_2D300:
 		move.b	#$1E,(V_int_routine).w
 		jsr	(Process_Kos_Queue).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		jsr	(Process_Nem_Queue_Init).w
 		jsr	(Process_Kos_Module_Queue).w
 		tst.b	(Kos_modules_left).w
@@ -48554,7 +48606,7 @@ loc_2D35C:
 
 loc_2D378:
 		move.b	#8,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		addq.w	#1,(Level_frame_counter).w
 		jsr	(Process_Sprites).l
 		jsr	(Render_Sprites).l
@@ -49656,8 +49708,10 @@ loc_2E83E:
 		add.w	d3,d0
 		move.w	d0,$14(a1)
 		move.w	#$380,8(a1)
-		move.w	#$18,6(a1)
-		move.l	(a3)+,$18(a1)
+		move.b	#$18,7(a1)
+		move.b	#$18,6(a1)
+		move.w	(a3)+,$18(a1)
+		move.w	(a3)+,$1A(a1)
 		move.b	d1,$22(a1)
 		dbf	d1,loc_2E83E
 
@@ -49729,7 +49783,8 @@ loc_2E8DA:
 loc_2E936:
 		move.b	d1,$20(a1)
 		move.w	#$380,8(a1)
-		move.w	#$18,6(a1)
+		move.b	#$18,7(a1)
+		move.b	#$18,6(a1)
 		move.w	#$400,$18(a1)
 		move.w	#0,$1A(a1)
 
@@ -49790,7 +49845,8 @@ loc_2E9C0:
 		move.w	$10(a0),$10(a1)
 		move.w	(Water_level).w,$14(a1)
 		move.w	#$200,8(a1)
-		move.w	#$18,6(a1)
+		move.b	#$18,7(a1)
+		move.b	#$18,6(a1)
 		move.b	#8,$20(a1)
 
 loc_2EA32:
@@ -49941,8 +49997,10 @@ loc_2EC20:
 		add.w	d3,d0
 		move.w	d0,$14(a1)
 		move.w	#$280,8(a1)
-		move.w	#$18,6(a1)
-		move.l	(a3)+,$18(a1)
+		move.b	#$18,7(a1)
+		move.b	#$18,6(a1)
+		move.w	(a3)+,$18(a1)
+		move.w	(a3)+,$1A(a1)
 		move.b	d1,$22(a1)
 		dbf	d1,loc_2EC20
 
@@ -50041,7 +50099,8 @@ sub_2ED6A:
 		move.w	$14(a0),$14(a1)
 		subi.w	#$50,$14(a1)
 		move.w	#$380,8(a1)
-		move.w	#$18,6(a1)
+		move.b	#$18,7(a1)
+		move.b	#$18,6(a1)
 		move.w	#$4530,$A(a1)
 		lsr.w	#4,d2
 		andi.w	#3,d2
@@ -50102,7 +50161,8 @@ Obj_HCZCGZFan:
 		addi.w	#$1C,$14(a0)
 		move.l	#Map_HCZWaterRushBlock,$C(a0)
 		move.w	#$43D4,$A(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		move.b	#4,4(a0)
 		move.w	#$280,8(a0)
 		move.w	a1,$3C(a0)
@@ -50208,7 +50268,8 @@ loc_2F0EA:
 		move.l	#Map_Bubbler,$C(a1)
 		move.w	#$45C,$A(a1)
 		move.b	#-$7C,4(a1)
-		move.w	#4,6(a1)
+		move.b	#4,7(a1)
+		move.b	#4,7(a1)
 		move.w	#$300,8(a1)
 		move.w	$10(a0),$10(a1)
 		jsr	(Random_Number).w
@@ -50527,7 +50588,7 @@ Obj_HCZHandLauncher:
 		move.w	#$23E4,$A(a1)
 		move.b	4(a0),4(a1)
 		move.b	#$20,7(a1)
-		move.b	#$30,6(a1)
+		move.b	#$30,7(a1)
 		move.w	#$280,8(a1)
 		move.w	$10(a0),$10(a1)
 		move.w	$14(a0),$14(a1)
@@ -51399,7 +51460,8 @@ Obj_HCZConveryorSpike:
 		move.w	#$243E,$A(a0)
 		ori.b	#4,4(a0)
 		move.w	#$280,8(a0)
-		move.w	#$C,6(a0)
+		move.b	#$C,7(a0)
+		move.b	#$C,6(a0)
 		move.b	#$8B,$28(a0)
 		move.w	$10(a0),$30(a0)
 		move.w	$14(a0),$32(a0)
@@ -51700,7 +51762,8 @@ Obj_CNZCannon:
 		move.w	#$4374,$A(a0)
 		move.b	#4,4(a0)
 		move.w	#$280,8(a0)
-		move.w	#$30,6(a0)
+		move.b	#$30,7(a0)
+		move.b	#$30,6(a0)
 		move.b	#9,$22(a0)
 		bset	#6,4(a0)
 		move.w	#1,$16(a0)
@@ -52089,7 +52152,8 @@ Obj_CNZLightBulb:
 		move.w	#$4404,$A(a0)
 		ori.b	#4,4(a0)
 		move.w	#$280,8(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		tst.b	(Water_flag).w
 		bne.s	loc_30E30
 		move.l	#loc_30E4C,(a0)
@@ -52118,7 +52182,8 @@ Obj_CNZHoverFan:
 		move.w	#$43E8,$A(a0)
 		ori.b	#4,4(a0)
 		move.w	#$280,8(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		move.w	$10(a0),$30(a0)
 		move.b	$2C(a0),d0
 		move.b	d0,d1
@@ -52455,7 +52520,8 @@ Obj_CNZCylinder:
 		move.w	#$438E,$A(a0)
 		move.b	#4,4(a0)
 		move.w	#$280,8(a0)
-		move.w	#$20,6(a0)
+		move.b	#$20,7(a0)
+		move.b	#$20,6(a0)
 		move.w	$10(a0),$2E(a0)
 		move.w	$14(a0),$30(a0)
 		move.b	$2C(a0),d0
@@ -52578,16 +52644,16 @@ loc_313CE:
 		tst.w	$1A(a0)
 		bmi.s	loc_313FE
 		btst	#1,d5
-		beq.s	locret_31404
+		beq.s	loc_31404
 		addi.w	#$20,$1A(a0)
-		rts
+		bra.s	loc_31404
 ; ---------------------------------------------------------------------------
 
 loc_313FE:
 		addi.w	#$10,$1A(a0)
 
-locret_31404:
-		rts
+loc_31404:
+		bra.s	locret_31448
 ; ---------------------------------------------------------------------------
 
 loc_31406:
@@ -52599,16 +52665,16 @@ loc_31406:
 		tst.w	$1A(a0)
 		bpl.s	loc_3142C
 		btst	#0,d5
-		beq.s	locret_31432
+		beq.s	loc_31432
 		subi.w	#$20,$1A(a0)
-		rts
+		bra.s	loc_31432
 ; ---------------------------------------------------------------------------
 
 loc_3142C:
 		subi.w	#$10,$1A(a0)
 
-locret_31432:
-		rts
+loc_31432:
+		bra.s	locret_31448
 ; ---------------------------------------------------------------------------
 
 loc_31434:
@@ -53668,7 +53734,8 @@ Obj_Bumper:
 		move.l	#Map_Bumper,$C(a0)
 		move.w	#$4364,$A(a0)
 		move.b	#4,4(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		move.w	#$80,8(a0)
 		move.b	#$D7,$28(a0)
 		move.w	$10(a0),$30(a0)
@@ -55256,7 +55323,8 @@ Obj_MGZSwingingPlatform:
 		move.l	#Map_MGZSwingingPlatform,$C(a1)
 		move.w	#$435F,$A(a1)
 		move.b	#4,4(a1)
-		move.w	#$50,6(a1)
+		move.b	#$50,7(a1)
+		move.b	#$50,6(a1)
 		move.w	#$280,8(a1)
 		move.w	$10(a0),$10(a1)
 		move.w	$14(a0),$14(a1)
@@ -55350,7 +55418,8 @@ Obj_MGZSwingingSpikeBall:
 		move.l	#Map_MGZSwingingSpikeBall,$C(a0)
 		move.w	#$235F,$A(a0)
 		ori.b	#4,4(a0)
-		move.w	#$20,6(a0)
+		move.b	#$20,7(a0)
+		move.b	#$20,6(a0)
 		move.w	#$200,8(a0)
 		move.w	$10(a0),$30(a0)
 		move.w	$14(a0),$32(a0)
@@ -55362,7 +55431,8 @@ Obj_MGZSwingingSpikeBall:
 		move.l	#Map_MGZSwingingSpikeBall,$C(a1)
 		move.w	#$235F,$A(a1)
 		move.b	4(a0),4(a1)
-		move.w	#$50,6(a1)
+		move.b	#$50,7(a1)
+		move.b	#$50,6(a1)
 		move.w	#$280,8(a1)
 		move.w	$10(a0),$10(a1)
 		move.w	$14(a0),$14(a1)
@@ -55623,7 +55693,8 @@ loc_336DC:
 		move.l	$C(a0),$C(a1)
 		move.w	$A(a0),$A(a1)
 		move.w	#$200,8(a1)
-		move.w	#8,6(a1)
+		move.b	#8,7(a1)
+		move.b	#8,6(a1)
 		move.b	#2,$20(a1)
 
 loc_3371E:
@@ -55901,7 +55972,8 @@ Obj_MGZPulley:
 		move.l	#Map_MGZPulley,$C(a0)
 		move.w	#$235F,$A(a0)
 		ori.b	#4,4(a0)
-		move.w	#$20,6(a0)
+		move.b	#$20,7(a0)
+		move.b	#$20,6(a0)
 		move.w	#$280,8(a0)
 		bset	#6,4(a0)
 		move.w	#1,$16(a0)
@@ -57798,12 +57870,12 @@ sub_352B4:
 		move.w	$38(a0),d0
 		addi.w	#$80,$34(a0)
 		cmp.w	$34(a0),d0
-		bhi.s	locret_352D4
+		bhi.s	loc_352D4
 		move.w	d0,$34(a0)
 		move.b	#1,$3A(a0)
 
-locret_352D4:
-		rts
+loc_352D4:
+		bra.s	locret_352EA
 ; ---------------------------------------------------------------------------
 
 loc_352D6:
@@ -57826,7 +57898,8 @@ Obj_BPZBalloon:
 		move.w	#$6300,$A(a0)
 		ori.b	#4,4(a0)
 		move.w	#$200,8(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		move.b	#$D7,$28(a0)
 		move.l	#loc_35344,(a0)
 
@@ -58040,7 +58113,8 @@ Obj_2PItem:
 		move.w	#$3C6,$A(a0)
 		ori.b	#4,4(a0)
 		move.w	#$280,8(a0)
-		move.w	#8,6(a0)
+		move.b	#8,7(a0)
+		move.b	#8,6(a0)
 		move.b	#4,$1F(a0)
 		move.b	#8,$1E(a0)
 		move.w	$10(a0),$30(a0)
@@ -59640,7 +59714,8 @@ loc_37454:
 		move.l	#Map_2PItemIcon,$C(a0)
 		move.w	#$8750,$A(a0)
 		move.w	#0,8(a0)
-		move.w	#$10,6(a0)
+		move.b	#$10,7(a0)
+		move.b	#$10,6(a0)
 		move.w	#$120,$10(a0)
 		move.w	#$E0,$14(a0)
 		tst.b	$2C(a0)
@@ -59705,7 +59780,8 @@ Obj_EMZDripper:
 		move.w	#$6300,$A(a0)
 		move.b	#4,4(a0)
 		move.w	#$280,8(a0)
-		move.w	#8,6(a0)
+		move.b	#8,7(a0)
+		move.b	#8,6(a0)
 		move.b	#4,$1F(a0)
 		move.b	#4,$1E(a0)
 		btst	#0,$2A(a0)
@@ -59827,7 +59903,8 @@ Obj_WaterDrop:
 		move.w	#$235C,$A(a0)
 		ori.b	#4,4(a0)
 		move.w	#0,8(a0)
-		move.w	#8,6(a0)
+		move.b	#8,7(a0)
+		move.b	#8,6(a0)
 		move.b	#8,$1F(a0)
 		move.b	#7,$1E(a0)
 		move.b	#6,$22(a0)
@@ -61415,7 +61492,8 @@ loc_389EC:
 		move.w	#ArtTile_Player_1,$A(a0)
 		move.l	#Map_SonicSnowboard,$C(a0)
 		move.w	#$100,8(a0)
-		move.w	#$20,6(a0)
+		move.b	#$20,7(a0)
+		move.b	#$20,6(a0)
 		move.b	#4,4(a0)
 		move.b	#6,$22(a0)
 		move.w	#1,$20(a0)
@@ -61666,7 +61744,8 @@ Obj_LevelIntroICZ1:
 		move.l	#Map_Snowboard,$C(a0)
 		move.w	#$6A4,$A(a0)
 		move.w	#$80,8(a0)
-		move.w	#$20,6(a0)
+		move.b	#$20,7(a0)
+		move.b	#$20,6(a0)
 		move.b	#4,4(a0)
 		move.b	#8,$22(a0)
 		move.w	#$C0,$10(a0)
@@ -61818,7 +61897,8 @@ sub_38F22:
 		move.w	#$6B8,$A(a1)
 		move.l	#Map_SnowboardDust,$C(a1)
 		move.w	#$100,8(a1)
-		move.w	#4,6(a1)
+		move.b	#4,7(a1)
+		move.b	#4,6(a1)
 		move.b	#$84,4(a1)
 		move.w	#1,$20(a1)
 		move.w	$10(a2),$10(a1)
@@ -65633,7 +65713,7 @@ loc_3B7A8:
 		bls.s	loc_3B7CE
 		move.w	d0,(Player_1+x_pos).w
 		move.w	#$400,(Player_1+ground_vel).w
-		rts
+		bra.s	locret_3B7DC
 ; ---------------------------------------------------------------------------
 
 loc_3B7CE:
@@ -66430,7 +66510,7 @@ loc_3C556:
 loc_3C568:
 		move.w	d3,(a1)+
 		dbf	d0,loc_3C568
-		rts
+		bra.s	locret_3C58E
 ; ---------------------------------------------------------------------------
 
 loc_3C570:
@@ -70732,7 +70812,7 @@ LBZ2_EndFallingAccel:
 		tst.w	(_unkEEA2).w
 		beq.s	loc_3EECC
 		subi.w	#$100,(_unkEEA2).w
-		rts
+		bra.s	locret_3EEDE
 ; ---------------------------------------------------------------------------
 
 loc_3EECC:
@@ -70903,7 +70983,7 @@ loc_3F0F4:
 		jsr	(Process_Sprites).l
 		jsr	(Render_Sprites).l
 		move.b	#$18,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		move.w	(VDP_reg_1_command).w,d0
 		ori.b	#$40,d0
 		move.w	d0,(VDP_control_port).l
@@ -70913,7 +70993,7 @@ loc_3F0F4:
 
 loc_3F168:
 		move.b	#$18,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		jsr	(Process_Sprites).l
 		jsr	(Render_Sprites).l
 		move.b	(_unkFAA9).w,d0
@@ -71234,7 +71314,8 @@ loc_3F500:
 		move.w	#$408C,$A(a0)
 		move.w	#$280,8(a0)
 		move.b	#7,$22(a0)
-		move.w	#8,6(a0)
+		move.b	#8,7(a0)
+		move.b	#8,6(a0)
 		move.w	#$120,$10(a0)
 		move.w	#$F5,$14(a0)
 		move.l	#loc_3F538,(a0)
@@ -71247,7 +71328,8 @@ loc_3F53E:
 		move.l	#Map_ContinueIcons,$C(a0)
 		move.w	#$D9,$A(a0)
 		move.w	#$280,8(a0)
-		move.w	#8,6(a0)
+		move.b	#8,7(a0)
+		move.b	#8,6(a0)
 		bsr.w	sub_3F630
 		move.w	#$D8,$14(a0)
 		move.l	#loc_3F572,(a0)
@@ -71269,7 +71351,8 @@ Obj_3F58E:
 		move.l	#Map_ContinueIcons,$C(a0)
 		move.w	#$D9,$A(a0)
 		move.w	#$280,8(a0)
-		move.w	#8,6(a0)
+		move.b	#8,7(a0)
+		move.b	#8,6(a0)
 		move.l	#loc_3F5B4,(a0)
 
 loc_3F5B4:
@@ -71510,7 +71593,7 @@ loc_404AC:
 		jsr	(Play_Music).w
 		move.w	#$B4,(_unkFA82).w
 		move.b	#$18,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		move.w	(VDP_reg_1_command).w,d0
 		ori.b	#$40,d0
 		move.w	d0,(VDP_control_port).l
@@ -71519,7 +71602,7 @@ loc_404AC:
 loc_404E0:
 		move.b	#$18,(V_int_routine).w
 		jsr	(Process_Kos_Queue).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		addq.w	#1,(Level_frame_counter).w
 		jsr	(Process_Sprites).l
 		jsr	(Render_Sprites).l
@@ -71570,7 +71653,7 @@ loc_40550:
 		lea	(a1,d0.w),a1
 		bsr.w	sub_40A4A
 		move.b	#$18,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		jmp	(Pal_FadeFromBlack).l
 ; ---------------------------------------------------------------------------
 
@@ -71648,7 +71731,7 @@ loc_4065C:
 		jsr	(Process_Sprites).l
 		jsr	(Render_Sprites).l
 		move.b	#$18,(V_int_routine).w
-		jsr	(Wait_VSync).w
+		jsr	(Wait_VSync).l
 		jmp	(Pal_FadeFromBlack).l
 ; ---------------------------------------------------------------------------
 Child6_EndingS3Logo:
@@ -71672,7 +71755,8 @@ loc_4069E:
 		move.l	#Map_EndingGraphics,$C(a0)
 		move.w	#$C08E,$A(a0)
 		move.w	#$280,8(a0)
-		move.w	#$40,6(a0)
+		move.b	#$40,7(a0)
+		move.b	#$40,6(a0)
 		move.b	#0,$22(a0)
 		move.w	#$120,$10(a0)
 		move.w	#$40,$14(a0)
@@ -71755,7 +71839,8 @@ loc_4078C:
 		move.l	#Map_EndingGraphics,$C(a0)
 		move.w	#$E08E,$A(a0)
 		move.w	#$100,8(a0)
-		move.w	#$18,6(a0)
+		move.b	#$18,7(a0)
+		move.b	#$18,6(a0)
 		move.b	#1,$22(a0)
 		move.w	#$100,$10(a0)
 		move.w	#$11C,$14(a0)
@@ -71809,7 +71894,8 @@ loc_40854:
 		move.l	#Map_EndingGraphics,$C(a0)
 		move.w	#$E08E,$A(a0)
 		move.w	#$180,8(a0)
-		move.w	#$C,6(a0)
+		move.b	#$C,7(a0)
+		move.b	#$C,6(a0)
 		move.b	#1,$22(a0)
 		bset	#0,4(a0)
 
@@ -71870,7 +71956,8 @@ loc_40930:
 		move.l	#Map_AIZIntroEmeralds,$C(a0)
 		move.w	#$E211,$A(a0)
 		move.w	#$80,8(a0)
-		move.w	#4,6(a0)
+		move.b	#4,7(a0)
+		move.b	#4,6(a0)
 		moveq	#0,d0
 		move.b	$2C(a0),d0
 		add.w	d0,d0
@@ -75455,7 +75542,7 @@ loc_45B56:
 		move.w	#$529,$A(a0)
 		move.w	#$280,8(a0)
 		move.b	#$40,7(a0)
-		move.b	#$20,6(a0)
+		move.b	#$20,7(a0)
 		jsr	Swing_Setup1(pc)
 		lea	(ArtKosM_AIZIntroPlane).l,a1
 		move.w	#$A520,d2
@@ -75502,7 +75589,7 @@ loc_45C00:
 		move.w	#$529,$A(a0)
 		move.w	#$280,8(a0)
 		move.b	#4,7(a0)
-		move.b	#$C,6(a0)
+		move.b	#$C,7(a0)
 		move.l	#loc_45C26,(a0)
 
 loc_45C26:
@@ -75517,7 +75604,7 @@ loc_45C3E:
 		move.w	#$529,$A(a0)
 		move.w	#$280,8(a0)
 		move.b	#4,7(a0)
-		move.b	#$C,6(a0)
+		move.b	#$C,7(a0)
 		move.l	#loc_45C64,(a0)
 
 loc_45C64:
@@ -81498,8 +81585,10 @@ loc_49B08:
 		add.w	d3,d0
 		move.w	d0,$14(a1)
 		move.w	#$280,8(a1)
-		move.w	#$18,6(a1)
-		move.l	(a3)+,$18(a1)
+		move.b	#$18,7(a1)
+		move.b	#$18,6(a1)
+		move.w	(a3)+,$18(a1)
+		move.w	(a3)+,$1A(a1)
 		move.b	d1,$22(a1)
 		dbf	d1,loc_49B08
 
@@ -95094,7 +95183,8 @@ CopyWordData_2:
 Obj_WaitOffscreen:
 		move.l	#Map_Offscreen,$C(a0)
 		bset	#2,4(a0)
-		move.w	#$20,6(a0)
+		move.b	#$20,7(a0)
+		move.b	#$20,6(a0)
 		move.l	(sp)+,$34(a0)
 		move.l	#loc_53FFC,(a0)
 
@@ -110396,7 +110486,7 @@ ArtNem_2PLapNum:binclude "General/2P Zone/Nemesis Art/Lap Numbers.bin"
 ArtNem_2PPosIcon:
 		binclude "General/2P Zone/Nemesis Art/Position Icons.bin"
 		even
-ArtNem_BPZMisc:	binclude "Levels/BPZ/Nemesis Art/Misc Art.nem"
+ArtNem_BPZMisc:	binclude "Levels/BPZ/Nemesis Art/Misc Art.bin"
 		even
 ArtNem_DPZMisc:	binclude "Levels/DPZ/Nemesis Art/Misc Art.bin"
 		even
@@ -110457,10 +110547,10 @@ ArtKosM_LBZTitleCard:
 		binclude "Levels/LBZ/KosinskiM Art/Title Card.kosm"
 		even
 ArtKosM_ALZTitleCard:
-		binclude "Levels/ALZ/KosinskiM Art/Title Card.kosm"
+		binclude "Levels/ALZ/KosinskiM Art/Title Card.bin"
 		even
 ArtKosM_BPZTitleCard:
-		binclude "Levels/BPZ/KosinskiM Art/Title Card.kosm"
+		binclude "Levels/BPZ/KosinskiM Art/Title Card.bin"
 		even
 ArtKosM_CGZTitleCard:
 		binclude "Levels/CGZ/KosinskiM Art/Title Card.bin"
@@ -110718,17 +110808,17 @@ MHZ_128x128_Kos:
 LRZ_16x16_Kos:
 ArtKosM_LRZ:
 LRZ_128x128_Kos:
-ALZ_16x16_Kos:	binclude "Levels/ALZ/Blocks/Primary.kos"
+ALZ_16x16_Kos:	binclude "Levels/ALZ/Blocks/Primary.bin"
 		even
-ALZ_8x8_KosM:	binclude "Levels/ALZ/Tiles/Primary.kosm"
+ALZ_8x8_KosM:	binclude "Levels/ALZ/Tiles/Primary.bin"
 		even
-ALZ_128x128_Kos:binclude "Levels/ALZ/Chunks/Primary.kos"
+ALZ_128x128_Kos:binclude "Levels/ALZ/Chunks/Primary.bin"
 		even
-BPZ_16x16_Kos:	binclude "Levels/BPZ/Blocks/Primary.kos"
+BPZ_16x16_Kos:	binclude "Levels/BPZ/Blocks/Primary.bin"
 		even
-BPZ_8x8_KosM:	binclude "Levels/BPZ/Tiles/Primary.kosm"
+BPZ_8x8_KosM:	binclude "Levels/BPZ/Tiles/Primary.bin"
 		even
-BPZ_128x128_Kos:binclude "Levels/BPZ/Chunks/Primary.kos"
+BPZ_128x128_Kos:binclude "Levels/BPZ/Chunks/Primary.bin"
 		even
 DPZ_16x16_Kos:	binclude "Levels/DPZ/Blocks/Primary.bin"
 		even
