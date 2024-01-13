@@ -1,9 +1,10 @@
 Snd_Emerald_Header:
 	smpsHeaderStartSong 3, 1
 	smpsHeaderVoice     Snd_Emerald_Voices
-	smpsHeaderChan      $06, $02
+	smpsHeaderChan      $07, $02
 	smpsHeaderTempo     $01, $35
 
+	smpsHeaderDAC       Snd_Emerald_DAC
 	smpsHeaderFM        Snd_Emerald_FM1,	$F4, $08
 	smpsHeaderFM        Snd_Emerald_FM2,	$F4, $08
 	smpsHeaderFM        Snd_Emerald_FM3,	$F4, $07
@@ -65,6 +66,8 @@ Snd_Emerald_Loop00:
 	dc.b	nG5, $06, nF5, nE5, nD5
 	smpsPSGAlterVol     $03
 	smpsLoop            $00, $04, Snd_Emerald_Loop00
+	
+Snd_Emerald_DAC:
 	smpsStop
 
 Snd_Emerald_Voices:

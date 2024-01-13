@@ -1113,16 +1113,16 @@ ArtNem_2PPosIcon:
 		binclude "General/2P Zone/Nemesis Art/Position Icons.bin"
 		even
 ArtNem_BPZMisc:
-		binclude "Levels/BPZ/Nemesis Art/Misc Art.bin"
+		binclude "Levels/BPZ/Nemesis Art/Misc Art.nem"
 		even
 ArtNem_DPZMisc:
-		binclude "Levels/DPZ/Nemesis Art/Misc Art.bin"
+		binclude "Levels/DPZ/Nemesis Art/Misc Art.nem"
 		even
 ArtNem_CGZMisc:
-		binclude "Levels/CGZ/Nemesis Art/Platform.bin"
+		binclude "Levels/CGZ/Nemesis Art/Platform.nem"
 		even
 ArtNem_EMZMisc:
-		binclude "Levels/EMZ/Nemesis Art/Misc Art.bin"
+		binclude "Levels/EMZ/Nemesis Art/Misc Art.nem"
 		even
 ArtKosM_AIZ2Bombership2_8x8:
 		binclude "Levels/AIZ/Tiles/Act 2 Bombership 2.kosm"
@@ -1152,19 +1152,19 @@ ArtKosM_LBZTitleCard:
 		binclude "Levels/LBZ/KosinskiM Art/Title Card.kosm"
 		even
 ArtKosM_ALZTitleCard:
-		binclude "Levels/ALZ/KosinskiM Art/Title Card.bin"
+		binclude "Levels/ALZ/KosinskiM Art/Title Card.kosm"
 		even
 ArtKosM_BPZTitleCard:
-		binclude "Levels/BPZ/KosinskiM Art/Title Card.bin"
+		binclude "Levels/BPZ/KosinskiM Art/Title Card.kosm"
 		even
 ArtKosM_CGZTitleCard:
-		binclude "Levels/CGZ/KosinskiM Art/Title Card.bin"
+		binclude "Levels/CGZ/KosinskiM Art/Title Card.kosm"
 		even
 ArtKosM_DPZTitleCard:
-		binclude "Levels/DPZ/KosinskiM Art/Title Card.bin"
+		binclude "Levels/DPZ/KosinskiM Art/Title Card.kosm"
 		even
 ArtKosM_EMZTitleCard:
-		binclude "Levels/EMZ/KosinskiM Art/Title Card.bin"
+		binclude "Levels/EMZ/KosinskiM Art/Title Card.kosm"
 		even
 Pal_SaveMenuBG:
 		binclude "General/Save Menu/Palettes/BG.bin"
@@ -1783,35 +1783,35 @@ LBZ2_128x128_Kos:
 LBZ2_128x128_DeathEgg_Kos:
 		binclude "Levels/LBZ/Chunks/Act 2 Death Egg.kos"
 		even
-ALZ_16x16_Kos:	binclude "Levels/ALZ/Blocks/Primary.bin"
+ALZ_16x16_Kos:	binclude "Levels/ALZ/Blocks/Primary.kos"
 		even
-ALZ_8x8_KosM:	binclude "Levels/ALZ/Tiles/Primary.bin"
+ALZ_8x8_KosM:	binclude "Levels/ALZ/Tiles/Primary.kosm"
 		even
-ALZ_128x128_Kos:binclude "Levels/ALZ/Chunks/Primary.bin"
+ALZ_128x128_Kos:binclude "Levels/ALZ/Chunks/Primary.kos"
 		even
-BPZ_16x16_Kos:	binclude "Levels/BPZ/Blocks/Primary.bin"
+BPZ_16x16_Kos:	binclude "Levels/BPZ/Blocks/Primary.kos"
 		even
-BPZ_8x8_KosM:	binclude "Levels/BPZ/Tiles/Primary.bin"
+BPZ_8x8_KosM:	binclude "Levels/BPZ/Tiles/Primary.kosm"
 		even
-BPZ_128x128_Kos:binclude "Levels/BPZ/Chunks/Primary.bin"
+BPZ_128x128_Kos:binclude "Levels/BPZ/Chunks/Primary.kos"
 		even
-DPZ_16x16_Kos:	binclude "Levels/DPZ/Blocks/Primary.bin"
+DPZ_16x16_Kos:	binclude "Levels/DPZ/Blocks/Primary.kos"
 		even
-DPZ_8x8_KosM:	binclude "Levels/DPZ/Tiles/Primary.bin"
+DPZ_8x8_KosM:	binclude "Levels/DPZ/Tiles/Primary.kosm"
 		even
-DPZ_128x128_Kos:binclude "Levels/DPZ/Chunks/Primary.bin"
+DPZ_128x128_Kos:binclude "Levels/DPZ/Chunks/Primary.kos"
 		even
-CGZ_16x16_Kos:	binclude "Levels/CGZ/Blocks/Primary.bin"
+CGZ_16x16_Kos:	binclude "Levels/CGZ/Blocks/Primary.kos"
 		even
-CGZ_8x8_KosM:	binclude "Levels/CGZ/Tiles/Primary.bin"
+CGZ_8x8_KosM:	binclude "Levels/CGZ/Tiles/Primary.kosm"
 		even
-CGZ_128x128_Kos:binclude "Levels/CGZ/Chunks/Primary.bin"
+CGZ_128x128_Kos:binclude "Levels/CGZ/Chunks/Primary.kos"
 		even
-EMZ_16x16_Kos:	binclude "Levels/EMZ/Blocks/Primary.bin"
+EMZ_16x16_Kos:	binclude "Levels/EMZ/Blocks/Primary.kos"
 		even
-EMZ_8x8_KosM:	binclude "Levels/EMZ/Tiles/Primary.bin"
+EMZ_8x8_KosM:	binclude "Levels/EMZ/Tiles/Primary.kosm"
 		even
-EMZ_128x128_Kos:binclude "Levels/EMZ/Chunks/Primary.bin"
+EMZ_128x128_Kos:binclude "Levels/EMZ/Chunks/Primary.kos"
 		even
 Gumball_16x16_Kos:
 		binclude "Levels/Gumball/Blocks/Primary.bin"
